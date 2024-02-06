@@ -1,15 +1,17 @@
 let products = []
+const fs = require('fs').promises
 
 class ProductManager {
     static id = 1
+    static path = "./json/products.json"
 
-    constructor(title, description, price, thumbnail, code, stock){
+    constructor(title, description, price, thumbnail, code, stock, path){
         this.title = title,
         this.description = description,
         this.price = price,
         this. thumbnail = thumbnail,
         this.code = code,
-        this.stock = stock
+        this.stock = stock        
     }
 
     addProduct () {
