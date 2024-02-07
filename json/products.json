@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "A new Keyboard",
+    "description": "A new mechanical keyboard",
+    "price": 150,
+    "thumbnail": "./assets/img/keyboard2.jpg",
+    "code": "keyboard-2",
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "title": "Monitor",
+    "description": "A nice monitor",
+    "price": 350,
+    "thumbnail": "./assets/img/monitor1.jpg",
+    "code": "monitor-1",
+    "stock": 10
+  },
+  {
+    "id": 4,
+    "title": "Headphones",
+    "description": "A nice headphone",
+    "price": 200,
+    "thumbnail": "./assets/img/headphones1.jpg",
+    "code": "headphones-1",
+    "stock": 10
+  },
+  {
+    "id": 5,
+    "title": "Desktop",
+    "description": "A nice desktop",
+    "price": 1000,
+    "thumbnail": "./assets/img/desktop1.jpg",
+    "code": "desktop-1",
+    "stock": 10
+  },
+  {
+    "id": 6,
+    "title": "Laptop",
+    "description": "A nice laptop",
+    "price": 1500,
+    "thumbnail": "./assets/img/laptop1.jpg",
+    "code": "laptop-1",
+    "stock": 10
+  },
+  {
+    "id": 7,
+    "title": "Tablet",
+    "description": "A nice tablet",
+    "price": 800,
+    "thumbnail": "./assets/img/tablet1.jpg",
+    "code": "tablet-1",
+    "stock": 10
+  },
+  {
+    "id": 8,
+    "title": "Printer",
+    "description": "A nice printer",
+    "price": 500,
+    "thumbnail": "./assets/img/printer1.jpg",
+    "code": "printer-1",
+    "stock": 10
+  }
+]

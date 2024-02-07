@@ -1,4 +1,4 @@
-import fs from "fs"
+import fs from "fs/promises"
 
 let products = []
 
@@ -59,9 +59,8 @@ class ProductManager {
             const products = JSON.parse(data)
             return products
         } catch (error) {
-            console.error(`There was an error getting the products`, error);
-            await fs.writeFile(ProductManager.path, '[]', 'utf-8');
-            return [];
+            await fs.writeFile(ProductManager.path, '[]', 'utf-8')
+            return []
         }
     }
 
