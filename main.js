@@ -18,7 +18,7 @@ class ProductManager {
     async addProduct() {
         try {
             const existingProducts = await this.getProducts()
-            const existingProduct = await existingProducts.find(product => product.code === this.code)
+            const existingProduct = existingProducts.find(product => product.code === this.code)
 
             if (existingProduct) {
                 return console.log(`Product with the same code ${this.code} already exists, please try again`)
@@ -58,7 +58,6 @@ class ProductManager {
             const data = await fs.readFile(ProductManager.path)
             const products = JSON.parse(data)
             return products
-
         } catch (error) {
             await fs.writeFile(ProductManager.path, '[]', 'utf-8')
             return []
@@ -96,7 +95,7 @@ class ProductManager {
             console.log(`Product ${id} updated successfully`)
 
         } catch (error) {
-            console.log(`Product ID ${id} not found`, error)
+            console.log(`Product with ID ${id} not found. Update failed.`, error);
         }
     }
     async deleteProductById(id) {
