@@ -99,7 +99,7 @@ class ProductManager {
             console.log(`Product ID ${id} not found`, error)
         }
     }
-    async eraseProductById(id) {
+    async deleteProductById(id) {
         try {
            const data = await fs.readFile(ProductManager.path)
            const products = JSON.parse(data)
@@ -160,7 +160,7 @@ await new ProductManager().updateProductById(1, { title: `A new Keyboard`, descr
 await new ProductManager().getProductById(1)
 
 // Test erase product by ID
-await new ProductManager().eraseProductById(2)
+await new ProductManager().deleteProductById(2)
 
 // Test getProducts without the erased product
 testGetProducts()
