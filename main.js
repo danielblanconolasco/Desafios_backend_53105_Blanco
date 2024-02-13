@@ -70,7 +70,9 @@ class ProductManager {
             const products = JSON.parse(data)
             const product = products.find(product => product.id === id)
             if (product) {
-                console.log(`Product ${id} is:\n`, product)
+                //console.log(`Product ${id} is:\n`, product)
+                // Adding the return for app.js to work
+                return product
             } else {
                 console.log(`Product ID ${id} not found`)
             }
@@ -114,7 +116,7 @@ class ProductManager {
     }
 }
 
-// Creation of 8 items
+// Creation of 12 items
 await new ProductManager(`Keyboard`, `A nice mechanical keyboard`, 120, `./assets/img/keyboard1.jpg`, `keyboard-1`, 10).addProduct()
 
 await new ProductManager(`Mouse`, `A nice mouse`, 90, `./assets/img/mouse1.jpg`, `mouse-1`, 10).addProduct()
@@ -125,17 +127,25 @@ await new ProductManager(`Headphones`, `A nice headphone`, 200, `./assets/img/he
 
 await new ProductManager(`Desktop`, `A nice desktop`, 1000, `./assets/img/desktop1.jpg`, `desktop-1`, 10).addProduct()
 
-await new ProductManager(`Laptop`, `A nice laptop`, 1500, `./assets/img/laptop1.jpg`, `laptop-1`, 10).addProduct()
+await new ProductManager(`Laptop`, `A nice laptop`, 1200, `./assets/img/laptop1.jpg`, `laptop-1`, 10).addProduct()
 
 await new ProductManager(`Tablet`, `A nice tablet`, 800, `./assets/img/tablet1.jpg`, `tablet-1`, 10).addProduct()
 
 await new ProductManager(`Printer`, `A nice printer`, 500, `./assets/img/printer1.jpg`, `printer-1`, 10).addProduct()
 
+await new ProductManager(`Backpack`,`A nice backpack`, 80, `./assets/img/backpack1.jpg`, `backpack-1`, 7).addProduct()
+
+await new ProductManager(`Mousepad`, `A nice mousepad`, 20, `./assets/img/mousepad1.jpg`, `mousepad-1`, 10).addProduct()
+
+await new ProductManager(`Webcam`, `A nice webcam`, 100, `./assets/img/webcam1.jpg`, `webcam-1`, 10).addProduct()
+
+await new ProductManager(`Microphone`, `A nice microphone`, 150, `./assets/img/microphone1.jpg`, `microphone-1`, 10).addProduct()
+
 // Test product for console error
-await new ProductManager(`Printer 2`, `A nice printer`, 500, `./assets/img/printer2.jpg`, `printer-1`, 10).addProduct()
+// await new ProductManager(`Printer 2`, `A nice printer`, 500, `./assets/img/printer2.jpg`, `printer-1`, 10).addProduct()
 
 // Test getProducts
-async function testGetProducts() {
+/*async function testGetProducts() {
     try {
         const productManager = new ProductManager()
         const products = await productManager.getProducts()
@@ -143,25 +153,28 @@ async function testGetProducts() {
     } catch (error) {
         console.error(`Error testing getProducts:`, error)
     }
-}
+}*/
 // testGetProducts()
 
 // Test getProductsById without error
-await new ProductManager().getProductById(1)
+// await new ProductManager().getProductById(1)
 
 // Test getProductsById with error
-await new ProductManager().getProductById(10)
+// await new ProductManager().getProductById(10)
 
 // Test update product by ID
-await new ProductManager().updateProductById(1, { title: `A new Keyboard`, description: `A new mechanical keyboard`, price: 150, thumbnail: `./assets/img/keyboard2.jpg`, code: `keyboard-2`, stock: 10 })
+// await new ProductManager().updateProductById(1, { title: `A new Keyboard`, description: `A new mechanical keyboard`, price: 150, thumbnail: `./assets/img/keyboard2.jpg`, code: `keyboard-2`, stock: 10 })
 
 // Test getProductsById with updated product
-await new ProductManager().getProductById(1)
+// await new ProductManager().getProductById(1)
 
 // Test erase product by ID
-await new ProductManager().deleteProductById(2)
+// await new ProductManager().deleteProductById(2)
 
 // Test getProducts without the erased product
-testGetProducts()
+// testGetProducts()
 
-await new ProductManager().getProductById(2)
+// await new ProductManager().getProductById(2)
+
+// Export of class ProductManager
+export default ProductManager

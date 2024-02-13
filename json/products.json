@@ -1,11 +1,20 @@
 [
   {
     "id": 1,
-    "title": "A new Keyboard",
-    "description": "A new mechanical keyboard",
-    "price": 150,
-    "thumbnail": "./assets/img/keyboard2.jpg",
-    "code": "keyboard-2",
+    "title": "Keyboard",
+    "description": "A nice mechanical keyboard",
+    "price": 120,
+    "thumbnail": "./assets/img/keyboard1.jpg",
+    "code": "keyboard-1",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "title": "Mouse",
+    "description": "A nice mouse",
+    "price": 90,
+    "thumbnail": "./assets/img/mouse1.jpg",
+    "code": "mouse-1",
     "stock": 10
   },
   {
@@ -39,7 +48,7 @@
     "id": 6,
     "title": "Laptop",
     "description": "A nice laptop",
-    "price": 1500,
+    "price": 1200,
     "thumbnail": "./assets/img/laptop1.jpg",
     "code": "laptop-1",
     "stock": 10
@@ -60,6 +69,42 @@
     "price": 500,
     "thumbnail": "./assets/img/printer1.jpg",
     "code": "printer-1",
+    "stock": 10
+  },
+  {
+    "id": 9,
+    "title": "Backpack",
+    "description": "A nice backpack",
+    "price": 80,
+    "thumbnail": "./assets/img/backpack1.jpg",
+    "code": "backpack-1",
+    "stock": 7
+  },
+  {
+    "id": 10,
+    "title": "Mousepad",
+    "description": "A nice mousepad",
+    "price": 20,
+    "thumbnail": "./assets/img/mousepad1.jpg",
+    "code": "mousepad-1",
+    "stock": 10
+  },
+  {
+    "id": 11,
+    "title": "Webcam",
+    "description": "A nice webcam",
+    "price": 100,
+    "thumbnail": "./assets/img/webcam1.jpg",
+    "code": "webcam-1",
+    "stock": 10
+  },
+  {
+    "id": 12,
+    "title": "Microphone",
+    "description": "A nice microphone",
+    "price": 150,
+    "thumbnail": "./assets/img/microphone1.jpg",
+    "code": "microphone-1",
     "stock": 10
   }
 ]
